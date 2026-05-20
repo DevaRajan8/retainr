@@ -16,3 +16,9 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/Devarajan8/memoryos"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.13",
+]
