@@ -18,7 +18,7 @@ class Memory:
             importance=importance, decay_days=decay_days,
         )
 
-    def recall(self, query: str, top_k: int = 5) -> list[dict]:
+    def recall(self, query: str, top_k: int = 1) -> list[dict]:
 
         query_embedding = self.embedder.encode(query)
         return self.store.search(self.user_id, query_embedding, top_k)
