@@ -2,7 +2,7 @@
 
 > Persistent, queryable memory for any Python AI app — local-first, zero API cost.
 
-[![PyPI version](https://badge.fury.io/py/memoryos-devarajan.svg)](https://pypi.org/project/memoryos-devarajan/)
+[![PyPI version](https://badge.fury.io/py/memoryos-official.svg)](https://pypi.org/project/memoryos-official/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
@@ -38,7 +38,7 @@ for r in results:
 ## Install
 
 ```bash
-pip install memoryos-devarajan
+pip install memoryos-official
 ```
 
 ---
