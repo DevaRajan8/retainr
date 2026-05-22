@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "memoryos-devarajan"
-version = "0.1.0"
+name = "memoryos-official"
+version = "0.1.1"
 description = "Persistent, queryable AI memory for any Python app — local-first, zero API cost"
 readme = "README.md"
 license = { text = "MIT" }
