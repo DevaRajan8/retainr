@@ -84,7 +84,7 @@ class VectorStore:
         return memory_id
 
     def search(self, user_id: str, query_embedding: np.ndarray,
-               top_k: int = 5) -> list[dict]:
+               top_k: int = 1) -> list[dict]:
         if self.index.ntotal == 0:
             return []
 
