@@ -37,18 +37,14 @@ class VectorStore:
         self.conn.commit()
         
     def delete(self, memory_id: str) -> bool:
-        conn = sqlite3.connect(self.db_path)
-        result = conn.execute("DELETE FROM memories WHERE id = ?", (memory_id,))
-        conn.commit()
-        conn.close()
+        result = self.conn.execute("DELETE FROM memories WHERE id = ?", (memory_id,))
+        self.conn.commit()
         self._rebuild_faiss()  # FAISS doesn't support single deletions
         return result.rowcount > 0
 
     def clear(self, user_id: str):
-        conn = sqlite3.connect(self.db_path)
-        conn.execute("DELETE FROM memories WHERE user_id = ?", (user_id,))
-        conn.commit()
-        conn.close()
+        self.conn.execute("DELETE FROM memories WHERE user_id = ?", (user_id,))
+        self.conn.commit()
         self._rebuild_faiss()
 
     def _rebuild_faiss(self):
