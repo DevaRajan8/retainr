@@ -1,7 +1,7 @@
 import sqlite3
 import json
 import uuid
-import time
+# import time
 import numpy as np
 import faiss
 
