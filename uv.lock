@@ -422,8 +422,8 @@ wheels = [
 ]
 
 [[package]]
-name = "memoryos"
-version = "0.1.0"
+name = "memoryos-official"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "faiss-cpu" },
