@@ -33,6 +33,14 @@ for r in results:
 [0.289] I like concise answers over long explanations
 ```
 
+## CLI Demo
+
+![alt text](image.png)
+
+### OUTPUT
+
+![alt text](image-1.png)
+
 ---
 
 ## Install
@@ -63,9 +71,9 @@ pip install memoryos-official
 mem = Memory(user_id="alice", db_path="memory.db")
 ```
 
-| Param | Default | Description |
-|---|---|---|
-| `user_id` | `"default"` | Isolates memories per user |
+| Param     | Default       | Description                                           |
+| --------- | ------------- | ----------------------------------------------------- |
+| `user_id` | `"default"`   | Isolates memories per user                            |
 | `db_path` | `"memory.db"` | SQLite file path. Use `":memory:"` for in-RAM (tests) |
 
 ---
@@ -138,13 +146,13 @@ mem.export("my_memories.json")
 
 ## Why not mem0 / Zep / etc.?
 
-| | memoryos | mem0 | Zep |
-|---|---|---|---|
-| Local-first | ✅ | ❌ | ❌ |
-| API key needed | ❌ | ✅ | ✅ |
-| Cost | Free | Paid tiers | Paid tiers |
-| Memory decay | ✅ | ❌ | ❌ |
-| `pip install` | ✅ | ✅ | ✅ |
+|                | memoryos | mem0       | Zep        |
+| -------------- | -------- | ---------- | ---------- |
+| Local-first    | ✅       | ❌         | ❌         |
+| API key needed | ❌       | ✅         | ✅         |
+| Cost           | Free     | Paid tiers | Paid tiers |
+| Memory decay   | ✅       | ❌         | ❌         |
+| `pip install`  | ✅       | ✅         | ✅         |
 
 ---
 
