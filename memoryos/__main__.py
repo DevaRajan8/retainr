@@ -43,7 +43,7 @@ def main():
         if not args:
             print("Error: provide a query")
             return
-        results = mem.recall(args, top_k=3)
+        results = mem.recall(args, top_k=1)
         if not results:
             print("No memories found.")
         for r in results:
