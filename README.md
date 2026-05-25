@@ -1,5 +1,7 @@
 # memoryos
 
+[![CI](https://github.com/Devarajan8/memoryos/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Devarajan8/memoryos/actions)
+
 > Persistent, queryable memory for any Python AI app — local-first, zero API cost.
 
 [![PyPI version](https://badge.fury.io/py/memoryos-official.svg)](https://pypi.org/project/memoryos-official/)
