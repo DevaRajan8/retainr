@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "memoryos-official"
-version = "0.1.1"
+version = "0.2.0"
 description = "Persistent, queryable AI memory for any Python app — local-first, zero API cost"
 readme = "README.md"
 license = { text = "MIT" }
