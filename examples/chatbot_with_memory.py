@@ -53,13 +53,30 @@ def chat_with_memory():
             mem.clear()
             print("Bot: Memory cleared.\n")
             continue
+        
+        def should_remember(user_input: str, client) -> bool:
 
-  
-        keywords = ["i like", "i prefer", "i am", "i use", "i want",
-                    "my name", "i work", "i study", "i hate", "i love"] #for now we are adding as an example - later on we will avoid this pattern matching
-        if any(user_input.lower().startswith(k) for k in keywords):
+            response = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{
+                    "role": "user",
+                    "content": (
+                        f"Does this message contain a personal fact, preference, or "
+                        f"long-term information worth remembering about the user?\n\n"
+                        f"Message: \"{user_input}\"\n\n"
+                        f"Reply with only YES or NO."
+                    )
+                }],
+                max_tokens=5,
+                temperature=0,   
+            )
+            answer = response.choices[0].message.content.strip().upper()
+            return answer.startswith("YES")
+        
+        
+        if HAS_GROQ and should_remember(user_input, client):
             mem.remember(user_input, importance=0.8)
-            print(f" Stored in memory")
+            print(" Stored in memory")
 
     
         memory_context = get_memory_context(mem, user_input)
