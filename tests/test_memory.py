@@ -7,7 +7,6 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-
 # ─── Basic functionality ──────────────────────────────────────────────────────
 
 def test_remember_and_recall():
