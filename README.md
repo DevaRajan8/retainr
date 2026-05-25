@@ -37,7 +37,7 @@ for r in results:
 
 ![alt text](image.png)
 
-### OUTPUT
+### Stats
 
 ![alt text](image-1.png)
 
@@ -53,13 +53,13 @@ pip install memoryos-official
 
 ## Features
 
-- 🧠 **Semantic recall** — finds memories by meaning, not exact keywords
-- 📉 **Memory decay** — old memories fade in relevance automatically
-- ⭐ **Importance scoring** — weight memories by how significant they are
-- 🏷️ **Tags** — organize memories into namespaces
-- 🗑️ **Forget & clear** — GDPR-friendly deletion
-- 💾 **Local-first** — uses FAISS + SQLite, no external services
-- 🆓 **Zero cost** — no API keys, no cloud, runs on your machine
+- **Semantic recall** — finds memories by meaning, not exact keywords
+- **Memory decay** — old memories fade in relevance automatically
+- **Importance scoring** — weight memories by how significant they are
+- **Tags** — organize memories into namespaces
+- **Forget & clear** — GDPR-friendly deletion
+- **Local-first** — uses FAISS + SQLite, no external services
+- **Zero cost** — no API keys, no cloud, runs on your machine
 
 ---
 
