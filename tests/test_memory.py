@@ -2,6 +2,11 @@ import time
 import pytest
 from memoryos import Memory
 
+import warnings
+
+warnings.filterwarnings("ignore")
+
+
 
 # ─── Basic functionality ──────────────────────────────────────────────────────
 
