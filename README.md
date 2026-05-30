@@ -1,10 +1,10 @@
-# memoryos
+# retainr
 
 [![CI](https://github.com/Devarajan8/memoryos/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Devarajan8/memoryos/actions)
 
 > Persistent, queryable memory for any Python AI app — local-first, zero API cost.
 
-[![PyPI version](https://badge.fury.io/py/memoryos-official.svg)](https://pypi.org/project/memoryos-official/)
+[![PyPI version](https://badge.fury.io/py/retainr.svg)](https://pypi.org/project/retainr/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
@@ -12,7 +12,7 @@
 
 ## What is it?
 
-`memoryos` gives any AI app a long-term memory layer — without needing an API key, a cloud service, or a database server.
+`retainr` gives any AI app a long-term memory layer — without needing an API key, a cloud service, or a database server.
 
 Store things. Recall them semantically. Forget them. All locally.
 
@@ -48,20 +48,20 @@ for r in results:
 ## Install
 
 ```bash
-pip install memoryos-official
+pip install retainr
 ```
 
 ---
 
 ## Features
 
-- **Semantic recall** — finds memories by meaning, not exact keywords
-- **Memory decay** — old memories fade in relevance automatically
-- **Importance scoring** — weight memories by how significant they are
-- **Tags** — organize memories into namespaces
-- **Forget & clear** — GDPR-friendly deletion
-- **Local-first** — uses FAISS + SQLite, no external services
-- **Zero cost** — no API keys, no cloud, runs on your machine
+- 🧠 **Semantic recall** — finds memories by meaning, not exact keywords
+- 📉 **Memory decay** — old memories fade in relevance automatically
+- ⭐ **Importance scoring** — weight memories by how significant they are
+- 🏷️ **Tags** — organize memories into namespaces
+- 🗑️ **Forget & clear** — GDPR-friendly deletion
+- 💾 **Local-first** — uses FAISS + SQLite, no external services
+- 🆓 **Zero cost** — no API keys, no cloud, runs on your machine
 
 ---
 
@@ -73,9 +73,9 @@ pip install memoryos-official
 mem = Memory(user_id="alice", db_path="memory.db")
 ```
 
-| Param     | Default       | Description                                           |
-| --------- | ------------- | ----------------------------------------------------- |
-| `user_id` | `"default"`   | Isolates memories per user                            |
+| Param | Default | Description |
+|---|---|---|
+| `user_id` | `"default"` | Isolates memories per user |
 | `db_path` | `"memory.db"` | SQLite file path. Use `":memory:"` for in-RAM (tests) |
 
 ---
@@ -148,13 +148,13 @@ mem.export("my_memories.json")
 
 ## Why not mem0 / Zep / etc.?
 
-|                | memoryos | mem0       | Zep        |
-| -------------- | -------- | ---------- | ---------- |
-| Local-first    | ✅       | ❌         | ❌         |
-| API key needed | ❌       | ✅         | ✅         |
-| Cost           | Free     | Paid tiers | Paid tiers |
-| Memory decay   | ✅       | ❌         | ❌         |
-| `pip install`  | ✅       | ✅         | ✅         |
+| | retainr | mem0 | Zep |
+|---|---|---|---|
+| Local-first | ✅ | ❌ | ❌ |
+| API key needed | ❌ | ✅ | ✅ |
+| Cost | Free | Paid tiers | Paid tiers |
+| Memory decay | ✅ | ❌ | ❌ |
+| `pip install` | ✅ | ✅ | ✅ |
 
 ---
 
