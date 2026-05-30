@@ -24,6 +24,9 @@ jobs:
       - name: Set up Python ${{ matrix.python-version }}
         run: uv python install ${{ matrix.python-version }}
 
+      - name: Install system dependencies
+        run: sudo apt-get install -y libgomp1
+
       - name: Install dependencies
         run: uv sync --all-extras --dev
 
@@ -31,4 +34,4 @@ jobs:
         run: uv run pytest tests/ -v
 
       - name: Lint
-        run: uv run ruff check memoryos/
+        run: uv run ruff check retainr/
