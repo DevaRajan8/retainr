@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "retainr"
-version = "0.2.1"
+version = "0.2.2"
 description = "Persistent, queryable AI memory for any Python app — local-first, zero API cost"
 readme = "README.md"
 license = { text = "MIT" }
@@ -19,7 +19,7 @@ dependencies = [
 Homepage = "https://github.com/Devarajan8/memoryos"
 
 [tool.hatch.build.targets.wheel]
-packages = ["memoryos"]
+packages = ["retainr"]
 
 [dependency-groups]
 dev = [
