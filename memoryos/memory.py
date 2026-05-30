@@ -8,6 +8,29 @@ class Memory:
         self.embedder = Embedder()
         self.store = VectorStore(db_path)
         
+        
+    def summarize(self, llm_fn=None) -> str:
+        results = self.store.search(
+            self.user_id,
+            self.embedder.encode(""),
+            top_k=99999
+        )
+
+        if not results:
+            return "No memories stored yet."
+
+        bullets = "\n".join(f"- {r['text']}" for r in results)
+
+        if llm_fn is None:
+            return f"Memories for user '{self.user_id}':\n{bullets}"
+
+        prompt = (
+            f"Here are facts about a user:\n{bullets}\n\n"
+            "Write a concise 2-3 sentence summary of what you know about this user. "
+            "Be specific and natural, like you're briefing someone."
+        )
+        return llm_fn(prompt)
+        
     def forget(self, memory_id: str) -> bool:
         return self.store.delete(memory_id)
 
