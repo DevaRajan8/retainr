@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "memoryos-official"
+name = "retainr"
 version = "0.2.0"
 description = "Persistent, queryable AI memory for any Python app — local-first, zero API cost"
 readme = "README.md"
