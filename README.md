@@ -17,7 +17,7 @@
 Store things. Recall them semantically. Forget them. All locally.
 
 ```python
-from memoryos import Memory
+from retainr import Memory
 
 mem = Memory(user_id="arjun")
 
@@ -70,6 +70,8 @@ pip install retainr
 ### `Memory(user_id, db_path)`
 
 ```python
+from retainr import Memory
+
 mem = Memory(user_id="alice", db_path="memory.db")
 ```
 
