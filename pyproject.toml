@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "retainr"
-version = "0.2.2"
+version = "0.3.0"  
 description = "Persistent, queryable AI memory for any Python app — local-first, zero API cost"
 readme = "README.md"
 license = { text = "MIT" }
@@ -14,9 +14,7 @@ dependencies = [
     "faiss-cpu>=1.8.0",
 ]
 
-[
-project.optional-dependencies
-]
+[project.optional-dependencies]
 groq = ["groq>=1.2.0"]
 openai = ["openai>=1.0.0"]
 all = ["groq>=1.2.0", "openai>=1.0.0"]
