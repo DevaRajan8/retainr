@@ -1,6 +1,6 @@
 import time
 import pytest
-from memoryos import Memory
+from retainr import Memory
 
 import warnings
 
