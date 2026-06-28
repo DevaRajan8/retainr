@@ -12,8 +12,14 @@ requires-python = ">=3.10"
 dependencies = [
     "sentence-transformers>=2.7.0",
     "faiss-cpu>=1.8.0",
-    "groq>=1.2.0",
 ]
+
+[
+project.optional-dependencies
+]
+groq = ["groq>=1.2.0"]
+openai = ["openai>=1.0.0"]
+all = ["groq>=1.2.0", "openai>=1.0.0"]
 
 [project.urls]
 Homepage = "https://github.com/Devarajan8/memoryos"
