@@ -8,6 +8,20 @@ class Memory:
         self.embedder = Embedder()
         self.store = VectorStore(db_path)
         
+    def import_from(self, filepath: str) -> int:
+
+        import json
+        with open(filepath, "r") as f:
+            memories = json.load(f)
+        count = 0
+        for m in memories:
+            self.remember(
+                text=m["text"],
+                tags=m.get("tags", []),
+                importance=m.get("importance", 0.5),
+            )
+            count += 1
+        return count
     
         
     def stats(self) -> dict:
