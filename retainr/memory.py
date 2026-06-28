@@ -8,6 +8,27 @@ class Memory:
         self.embedder = Embedder()
         self.store = VectorStore(db_path)
         
+    
+        
+    def stats(self) -> dict:
+        rows = self.store.conn.execute(
+            "SELECT timestamp, importance FROM memories WHERE user_id = ?",
+            (self.user_id,)
+        ).fetchall()
+
+        if not rows:
+            return {"total": 0, "oldest": None, "newest": None, "avg_importance": None}
+
+        timestamps = [r[0] for r in rows]
+        importances = [r[1] for r in rows]
+        return {
+            "total": len(rows),
+            "oldest": min(timestamps),
+            "newest": max(timestamps),
+            "avg_importance": round(sum(importances) / len(importances), 3),
+            "user_id": self.user_id,
+        }
+        
         
     def summarize(self, llm_fn=None) -> str:
         results = self.store.search(
