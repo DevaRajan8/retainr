@@ -3,10 +3,16 @@ from .embedder import Embedder
 from .store import VectorStore
 
 class Memory:
-    def __init__(self, user_id: str = "default", db_path: str = "memory.db"):
+    def __init__(self, user_id: str = "default",
+                 db_path: str = "memory.db",
+                 backend=None):
         self.user_id = user_id
         self.embedder = Embedder()
-        self.store = VectorStore(db_path)
+
+        if backend is not None:
+            self.store = backend        # cloud backend (Supabase etc.)
+        else:
+            self.store = VectorStore(db_path)   # default local
         
     def import_from(self, filepath: str) -> int:
 
