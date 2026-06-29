@@ -34,14 +34,13 @@ class RetainrMemory(BaseMemory):
         return ["history"]
 
     def load_memory_variables(self, inputs: dict) -> dict:
-        """Called by LangChain before LLM responds — returns relevant past memories."""
+
         query = inputs.get("input", inputs.get("human_input", ""))
         results = self.mem.recall(query, top_k=3)
         history = "\n".join(f"- {r['text']}" for r in results)
         return {"history": history}
 
     def save_context(self, inputs: dict, outputs: dict) -> None:
-        """Called by LangChain after LLM responds — saves the conversation turn."""
         user_msg = inputs.get("input", inputs.get("human_input", ""))
         bot_msg = outputs.get("output", outputs.get("response", ""))
         if user_msg:
