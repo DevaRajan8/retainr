@@ -18,12 +18,13 @@ dependencies = [
     "langchain-core>=1.4.8",
     "supabase>=2.31.0",
     "python-dotenv>=1.2.2",
+    "fastmcp>=3.4.5",
 ]
 
 [project.optional-dependencies]
 groq = ["groq>=1.2.0"]
 openai = ["openai>=1.0.0"]
-all = ["groq>=1.2.0", "openai>=1.0.0"]
+all = ["groq>=1.2.0", "openai>=1.0.0","fastmcp>=0.1.0"]
 
 [project.urls]
 Homepage = "https://github.com/Devarajan8/memoryos"
