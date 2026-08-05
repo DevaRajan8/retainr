@@ -2,11 +2,7 @@ import time
 import math
 
 def decay_score(base_score: float, timestamp: float, decay_days: int) -> float:
-    """
-    decay_days=0  → no decay (memory stays at full score forever)
-    decay_days=30 → score halves every 30 days
-    Formula: score * e^(-lambda * age_in_days), lambda = ln(2)/half_life
-    """
+
     if decay_days == 0:
         return base_score
     age_days = (time.time() - timestamp) / 86400
